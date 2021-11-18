@@ -1,0 +1,66 @@
+//  Git Basic Command Line
+
+git init
+    -git repository တစ်ခုစဆောက် (root folder နဲ့ level တစ်နေရာတည်းဆောက်သင့်)
+
+git stauts
+    -ကိုယ့်ရဲ့ file တွေကို modified လား staging လား check လုပ်ပေး
+
+git add <file name>
+    -ကိုယ်သွင်းချင်တဲ့ file တစ်ခုတည်းကိုပဲ staging mode ထဲသွင်းပေး
+
+git rm --cached <file name>
+    -file ကို staging mode က ပြန်ထွက်ပြီး modified mode ကို ပြန်ပြောင်းပေး
+
+git add .
+    -file တစ်ခုချင်းစီ မဟုတ်တော့ပဲ files တွေ အကုန်လုံးကို staging mode ထဲသွင်းပေး
+
+git commit -m <name>
+    -staging mode ထဲ ရောက်လာပြီဖြစ်တဲ့ files တွေကို commit တစ်ခုအဖြစ် ဆောက်ပေး
+    -commit name ကို ကြိုက်တဲ့ name ပေးလို့ရ
+
+git log
+    -commit ဘယ်နှခုရှိလဲ check လုပ်ပေး
+    -details ပြပေး
+
+git log --oneline
+    -commit ဘယ်နှခုရှိလဲ check လုပ်ပေး
+    -အပေါ်က command ထပ်ပိုပြီး ရှင်းလင်းအောင်ပြပေး
+
+git checkout <commit's id>
+    -ဆောက်ခဲ့ပြီးသား commit တွေကို ပြန်သွားကြည့်ပေး
+
+git checkout master
+    -commit တွေ ပြောင်းကြည့်ပြီးရင် master branch (ဒါမှမဟုတ် နောက်ဆုံးဆောက်ခဲ့တဲ့ commit ကို) ကို ပြန်ပြောင်းပေး
+
+git revert <commit's id>
+    -အရင်ရေးခဲ့တဲ့ commit ရဲ့ အခြေအနေကို သွားပေးပြီး ပြင်လို့ရပြီး နောက်ထပ် commit အသစ်တခုအဖြစ်ဆောက်ပေး
+    -1 2 3 4 5 ရှိရင် 2 ကို revert လုပ်ပြီး ပြင်ပြီးလို့ commit အသစ်ဆောက်လိုက်ရင် သူက 6 အဖြစ် နောက်ကနေလိုက်ပေးပြီး 3, 4 နဲ့ 5 လည်း ဘာမှမဖြစ်ပဲရှိနေမယ်
+
+git reset <commit's id> --hard
+    -commit တွေကို delete လုပ်ပေး
+    -ပေးလိုက်တဲ့ commit's id နောက်မှာ ဆောက်တဲ့ commit မှန်သမျှ အကုန်ဖျက်ပေး
+
+git branch -a
+    -branch ဘယ်နှခုရှိလဲ နှင့် ဘယ် branch ပေါ် ရောက်နေလဲ check ပေး
+
+git branch <name>
+    -branch အသစ်ဆောက်ပေး
+    -branch's name ကို ကြိုက်တာပေးလို့ရ
+
+git checkout <branch's name>
+    -branch တွေကို switch ပေး
+
+git checkout -b <name>
+    -branch ဆောက်ပြီး တစ်ခါတည်း ဆောက်လိုက်တဲ့ branch ကိုswitch ပေး
+
+git branch -D <branch's name>
+    -branch ကို ဖျက်ပေး
+    -master branch ပေါ်မှာပဲ branch အခွဲကို delete လို့ရ
+
+git checkout master
+    -branch ကို switch ပြီး master branch ကို ပြန်လာချင်ရင်သုံး
+
+git merge <branch's name>
+    -branch အခွဲကို မှာ လာပေါင်းပေး
+    -branch လာပေါင်းတဲ့အခါမှာ command ကို master branch ပေါ်မှာပဲ run လို့ရ
